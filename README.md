@@ -42,14 +42,18 @@ Prikaz u Wavedromu za signale tokom prijema:
 ]}
 
 ---
-Napomene:
-8'h55- preambula - 8'h ovo označava da je riječ o 8-bitnoj vrijednosti (1 bajt) prikazanoj u heksadecimalnom formatu; 55 - heksadecimalna vrijednost 55 u binarnom obliku je 01010101.
-8'hAB - SFD (Start Frame Delimiter): 1 oktet (fiksna vrijednost 0xAB).
-Nakon polja SFD pristižu okteti Ethernet okvira koji su označeni sa D1,..,D8:
--Destination MAC Address: 6 okteta.
--Source MAC Address: 6 okteta.
--EtherType/Length: 2 okteta.
--Payload (Data): 46 okteta (proizvoljno odabrana veličina).
--FCS (Frame Check Sequence): 4 okteta.
+
+### Napomene:
+- **8'h55**: Preambula - `8'h` označava 8-bitnu vrednost (1 bajt) prikazanu u heksadecimalnom formatu; `55` je heksadecimalna vrednost.
+- **8'hAB**: SFD (Start Frame Delimiter): 1 oktet (fiksna vrednost `0xAB`).
+
+Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D8`:
+- **Destination MAC Address**: 6 okteta.
+- **Source MAC Address**: 6 okteta.
+- **EtherType/Length**: 2 okteta.
+- **Payload (Data)**: 46 okteta (proizvoljno odabrana veličina).
+- **FCS (Frame Check Sequence)**: 4 okteta.
+
+---
 
 
