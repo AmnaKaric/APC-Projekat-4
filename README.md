@@ -10,18 +10,18 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 **08.12.2024.**
 ### Opis signala i prikaz signala u Wavedromu
 #### **Popis potrebnih ulaznih i izlaznih signala:**
-gmii_rx_clk - takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
-gmii_rxreset_n - reset signal koji inicijalizira prijemni dio GMII interfejsa.
-gmii_rxdv - signal koji označava da su podaci u gmii_rxd validni i da pripadaju Ethernet okviru.
-gmii_rxer - signal koji ukazuje na grešku u toku prenosa podataka na GMII interfejsu.
-gmii_rxd - ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
-rx_st_sop - signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
-rx_st_eop - signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
-rx_st_empty - signal koji pokazuje koliko bajtova u poslednjem 64-bitnom segmentu okvira nije validno.
-rx_st_valid - signal koji označava da su podaci na rx_st_data trenutno validni i spremni za obradu.
-rx_st_ready - ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
-rx_st_err - signal koji ukazuje na grešku u primljenom okviru.
-
+- **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
+- **`gmii_rxreset_n`**: Reset signal koji inicijalizira prijemni dio GMII interfejsa.
+- **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
+- **`gmii_rxer`**: Signal koji ukazuje na grešku u toku prenosa podataka na GMII interfejsu.
+- **`gmii_rxd`**: Ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
+- **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
+- **`rx_st_eop`**: Signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
+- **`rx_st_empty`**: Signal koji pokazuje koliko bajtova u poslednjem 64-bitnom segmentu okvira nije validno.
+- **`rx_st_valid`**: Signal koji označava da su podaci na `rx_st_data` trenutno validni i spremni za obradu.
+- **`rx_st_ready`**: Ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
+- **`rx_st_err`**: Signal koji ukazuje na grešku u primljenom okviru.
+  
 - Normalni režim rada:
 { signal: [
   { name: "gmii_rx_clk", wave: "p......................" },
