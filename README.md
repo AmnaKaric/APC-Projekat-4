@@ -24,6 +24,20 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   
 ### **a) Normalni režim rada:**
 Prikaz u Wavedromu za signale tokom prijema:
+---
+
+### Napomene:
+- **8'h55**: Preambula - `8'h` označava 8-bitnu vrednost (1 bajt) prikazanu u heksadecimalnom formatu; `55` je heksadecimalna vrednost.
+- **8'hAB**: SFD (Start Frame Delimiter): 1 oktet (fiksna vrednost `0xAB`).
+
+Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D8`:
+- **Destination MAC Address**: 6 okteta.
+- **Source MAC Address**: 6 okteta.
+- **EtherType/Length**: 2 okteta.
+- **Payload (Data)**: 46 okteta (proizvoljno odabrana veličina).
+- **FCS (Frame Check Sequence)**: 4 okteta.
+
+---
 
 ```json
 { "signal": [
@@ -41,19 +55,5 @@ Prikaz u Wavedromu za signale tokom prijema:
   { "name": "rx_st_err", "wave": "0......................" }
 ]}
 
----
-
-### Napomene:
-- **8'h55**: Preambula - `8'h` označava 8-bitnu vrednost (1 bajt) prikazanu u heksadecimalnom formatu; `55` je heksadecimalna vrednost.
-- **8'hAB**: SFD (Start Frame Delimiter): 1 oktet (fiksna vrednost `0xAB`).
-
-Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D8`:
-- **Destination MAC Address**: 6 okteta.
-- **Source MAC Address**: 6 okteta.
-- **EtherType/Length**: 2 okteta.
-- **Payload (Data)**: 46 okteta (proizvoljno odabrana veličina).
-- **FCS (Frame Check Sequence)**: 4 okteta.
-
----
 
 
