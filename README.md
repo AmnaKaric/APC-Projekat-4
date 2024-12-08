@@ -1,5 +1,6 @@
 # APC-Projekat-4
-Projekat 4: GMII prijemni interfejs
+
+## Projekat 4: GMII prijemni interfejs
 Modelirati i implementirati GMII prijemni interfejs koji putem ulaznog GMII interfejsa prima
 preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-ST interfejs
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
