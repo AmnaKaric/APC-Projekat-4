@@ -8,8 +8,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 
 ### Datum rada 
 **08.12.2024.**
-Opis signala i prikaz signala u Wavedromu.
-
+### Opis signala i prikaz signala u Wavedromu
 Popis potrebnih ulaznih i izlaznih signala:
 gmii_rx_clk - takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
 gmii_rxreset_n - reset signal koji inicijalizira prijemni dio GMII interfejsa.
