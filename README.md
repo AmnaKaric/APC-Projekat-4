@@ -41,8 +41,8 @@ Prikaz u Wavedromu za signale tokom prijema:
   { "name": "rx_st_err", "wave": "0......................" }
 ]}
 
-
-### Napomene:
+---
+Napomene:
 8'h55- preambula - 8'h ovo označava da je riječ o 8-bitnoj vrijednosti (1 bajt) prikazanoj u heksadecimalnom formatu; 55 - heksadecimalna vrijednost 55 u binarnom obliku je 01010101.
 8'hAB - SFD (Start Frame Delimiter): 1 oktet (fiksna vrijednost 0xAB).
 Nakon polja SFD pristižu okteti Ethernet okvira koji su označeni sa D1,..,D8:
