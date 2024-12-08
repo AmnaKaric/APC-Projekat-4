@@ -22,7 +22,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`rx_st_ready`**: Ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
 - **`rx_st_err`**: Signal koji ukazuje na grešku u primljenom okviru.
   
-### **Normalni režim rada:**
+### **a) Normalni režim rada:**
 Prikaz u Wavedromu za signale tokom prijema:
 
 ```json
@@ -42,7 +42,7 @@ Prikaz u Wavedromu za signale tokom prijema:
 ]}
 
 
-Napomene:
+### Napomene:
 8'h55- preambula - 8'h ovo označava da je riječ o 8-bitnoj vrijednosti (1 bajt) prikazanoj u heksadecimalnom formatu; 55 - heksadecimalna vrijednost 55 u binarnom obliku je 01010101.
 8'hAB - SFD (Start Frame Delimiter): 1 oktet (fiksna vrijednost 0xAB).
 Nakon polja SFD pristižu okteti Ethernet okvira koji su označeni sa D1,..,D8:
