@@ -6,7 +6,8 @@ preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
 
-08.12.2024. 
+### Datum
+**08.12.2024.**
 Opis signala i prikaz signala u Wavedromu.
 
 Popis potrebnih ulaznih i izlaznih signala:
