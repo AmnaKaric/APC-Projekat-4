@@ -23,7 +23,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`rx_st_err`**: Signal koji ukazuje na grešku u primljenom okviru.
   
 ### **a) Normalni režim rada:**
-Prikaz u Wavedromu za signale tokom prijema:
+### Prikaz u Wavedromu za signale tokom prijema:
 ---
 
 ### Napomene:
