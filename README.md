@@ -17,7 +17,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`gmii_rxd`**: Ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
 - **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_eop`**: Signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
-- **`rx_st_empty`**: Signal koji pokazuje koliko bajtova u poslednjem 64-bitnom segmentu okvira nije validno.
+- **`rx_st_empty`**: Signal koji pokazuje koliko bajtova u posljednjem 64-bitnom segmentu okvira nije validno.
 - **`rx_st_valid`**: Signal koji označava da su podaci na `rx_st_data` trenutno validni i spremni za obradu.
 - **`rx_st_ready`**: Ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
 - **`rx_st_err`**: Signal koji ukazuje na grešku u primljenom okviru.
@@ -27,8 +27,8 @@ Prikaz u Wavedromu za signale tokom prijema:
 ---
 
 ### Napomene:
-- **8'h55**: Preambula - `8'h` označava 8-bitnu vrednost (1 bajt) prikazanu u heksadecimalnom formatu; `55` je heksadecimalna vrednost.
-- **8'hAB**: SFD (Start Frame Delimiter): 1 oktet (fiksna vrednost `0xAB`).
+- **8'h55**: Preambula - `8'h` označava 8-bitnu vrijednost (1 bajt) prikazanu u heksadecimalnom formatu; `55` je heksadecimalna vrijednost.
+- **8'hAB**: SFD (Start Frame Delimiter): 1 oktet (fiksna vrijednost `0xAB`).
 
 Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D8`:
 - **Destination MAC Address**: 6 okteta.
