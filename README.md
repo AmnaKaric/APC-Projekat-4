@@ -15,7 +15,8 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
 - **`gmii_rxreset_n`**: Reset signal koji inicijalizira prijemni dio GMII interfejsa.
 - **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
-- **`gmii_rxd`**: Ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
+- **`gmii_rxd[7:0]`**: 8-bitni ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
+- **`rx_st_data[63:0]`**: 64-bitni izlazni signal koji prenosi podatke sa Avalon-ST interfejsa, uključujući cijeli Ethernet okvir, počevši od odredišne adrese pa do FCS polja.
 - **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_eop`**: Signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_empty`**: Signal koji pokazuje koliko bajtova u posljednjem 64-bitnom segmentu okvira je preostalo.
