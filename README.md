@@ -8,6 +8,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 
 ### Datum rada 
 **08.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
+---
 **11.12.2024. MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U**
 
 #### **Popis potrebnih ulaznih i izlaznih signala:**
