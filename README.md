@@ -28,10 +28,10 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 ---
 
 ### Napomene:
-- **8'h55**: Preambula - `8'h` označava 8-bitnu vrijednost (1 bajt) prikazanu u heksadecimalnom formatu; `55` je heksadecimalna vrijednost.
-- **8'hAB**: SFD (Start Frame Delimiter): 1 oktet (fiksna vrijednost `0xAB`).
+- **0x55**: Preambula - 7 okteta
+- **0xD5**: SFD (Start Frame Delimiter) - 1 oktet
 
-Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D8`:
+Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D64`:
 - **Destination MAC Address**: 6 okteta.
 - **Source MAC Address**: 6 okteta.
 - **EtherType/Length**: 2 okteta.
