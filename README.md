@@ -54,13 +54,13 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
   { "name": "rx_st_ready", "wave": "0..........10.........." },
   { "name": "rx_st_err", "wave": "0......................" }
 ]}
-```json
+---
+
 **10.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
 
 ### **b) Režim rada sa detektovanom greškom:**
 ### Prikaz u Wavedromu za signale tokom prijema:
 ---
-
 ```json
 { "signal": [
   { "name": "gmii_rx_clk", "wave": "p..............." },
