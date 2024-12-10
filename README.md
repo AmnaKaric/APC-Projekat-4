@@ -55,5 +55,28 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
   { "name": "rx_st_err", "wave": "0......................" }
 ]}
 
+**10.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
+
+### **b) Režim rada sa detektovanom greškom:**
+### Prikaz u Wavedromu za signale tokom prijema:
+---
+
+```json
+{ "signal": [
+  { "name": "gmii_rx_clk", "wave": "p..............." },
+  { "name": "gmii_rxreset_n", "wave": "01.............." },
+  { "name": "gmii_rxdv", "wave": "01..0..........." },
+  { "name": "gmii_rxer", "wave": "0....10........." },
+  { "name": "gmii_rxd", "wave": "x2222222222xxxxx", "data": ["8'h55", "8'hAB", "D1", "D2","D3", "D4", "D5", "D6", "D7", "D8", "x"] },
+  { "name": "rx_st_data", "wave": "xxxx22222222x...", "data": ["D1", "D2", "8’h0E", "D4", "D5", "D6", "D7", "D8", "x"] },
+  { "name": "rx_st_sop", "wave": "0...10.........." },
+  { "name": "rx_st_eop", "wave": "0..........10..." },
+  { "name": "rx_st_empty", "wave": "...22.......xx..", "data": ["0"] },
+  { "name": "rx_st_valid", "wave": "0...1.01.....0.." },
+  { "name": "rx_st_ready", "wave": "0...1.......0..." },
+  { "name": "rx_st_err", "wave": "0.....10........" }
+]}
+
+
 
 
