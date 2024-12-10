@@ -54,7 +54,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
   { "name": "rx_st_ready", "wave": "0..........10.........." },
   { "name": "rx_st_err", "wave": "0......................" }
 ]}
----
+```
 
 **10.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
 
