@@ -6,10 +6,6 @@ preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
 
-### Datum rada 
-**08.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
----
-**11.12.2024. MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U**
 
 #### **Popis potrebnih ulaznih i izlaznih signala:**
 - **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
@@ -55,7 +51,6 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
 ]}
 ```
 
-**10.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
 
 ### **b) Režim rada sa detektovanom greškom:**
 ### Prikaz u Wavedromu za signale tokom prijema:
@@ -75,7 +70,11 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
   { "name": "rx_st_ready", "wave": "0...1.......0..." },
   { "name": "rx_st_err", "wave": "0.....10........" }
 ]}
+```
 
-
-
-
+### TIMELINE AKTIVNOSTI NA PROJEKTU:
+**08.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
+---
+**10.12.2024.  OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U**
+---
+**11.12.2024. MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U**
