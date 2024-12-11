@@ -5,7 +5,14 @@ Modelirati i implementirati GMII prijemni interfejs koji putem ulaznog GMII inte
 preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-ST interfejs
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
+<details>
+  <summary>TIMELINE AKTIVNOSTI NA PROJEKTU</summary>
 
+  08.12.2024. OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
+  10.12.2024. OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
+  11.12.2024. MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U  
+
+</details>
 
 #### **Popis potrebnih ulaznih i izlaznih signala:**
 - **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
@@ -72,12 +79,4 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
 ]}
 ```
 
-<details>
-  <summary>TIMELINE AKTIVNOSTI NA PROJEKTU</summary>
-
-  08.12.2024. OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
-  10.12.2024. OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
-  11.12.2024. MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U  
-
-</details>
 
