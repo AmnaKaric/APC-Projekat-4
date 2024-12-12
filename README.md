@@ -95,5 +95,34 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
    "hscale": 2}
 }
 ```
+### **c) Prijem okvira uz backpressure (Avalon-ST sink povremeno deaktivira ready):**
 
+### Napomene:
+- **0x55**: Preambula - 7 okteta
+- **0xD5**: SFD (Start Frame Delimiter) - 1 oktet
 
+Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D63`:
+- **Destination MAC Address**: 6 okteta.
+- **Source MAC Address**: 6 okteta.
+- **EtherType/Length**: 2 okteta.
+- **Payload (Data)**: 46 okteta (proizvoljno odabrana veličina).
+- **FCS (Frame Check Sequence)**: 4 okteta.
+
+---
+```json
+{ "signal": [
+  { "name": "gmii_rx_clk", "wave": "p......................" },
+  { "name": "gmii_rxreset_n", "wave": "1......................" },
+  { "name": "gmii_rxdv", "wave": "01.............0......." },
+  { "name": "gmii_rxd [7:0]", "wave": "x222222222222|2xxxxxxxx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", " ","D63"] },
+  { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxx22.222..222x", "data": ["D0-D7", "D8-D15 ","D16-D23","D24-D31","D32-D39", "D40-D47","D48-D55", "D56-D63"] },
+  { "name": "rx_st_sop", "wave": "0..........10.........." },
+  { "name": "rx_st_eop", "wave": "0....................10" },
+  { "name": "rx_st_empty", "wave": "..........22.........xx", "data": ["0"] },
+  { "name": "rx_st_valid", "wave": "0..........1..........0" },
+  { "name": "rx_st_ready", "wave": "1...........0.1.0..1..." }
+],
+ "config":{
+   "hscale": 2}
+}
+```
