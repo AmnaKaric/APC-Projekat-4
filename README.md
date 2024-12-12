@@ -27,15 +27,15 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`rx_st_valid`**: Signal koji označava da su podaci na `rx_st_data` trenutno validni i spremni za obradu.
 - **`rx_st_ready`**: Ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
   
-### **a) Normalni režim rada:**
-### Prikaz u Wavedromu za signale tokom prijema:
+### **a) Prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8**
+### Prikaz koda u Wavedromu za signale tokom prijema:
 ---
 
 ### Napomene:
 - **0x55**: Preambula - 7 okteta
 - **0xD5**: SFD (Start Frame Delimiter) - 1 oktet
 
-Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D64`:
+Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D63`:
 - **Destination MAC Address**: 6 okteta.
 - **Source MAC Address**: 6 okteta.
 - **EtherType/Length**: 2 okteta.
@@ -63,24 +63,37 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D1,...,D
 ```
 
 
-### **b) Režim rada sa detektovanom greškom:**
-### Prikaz u Wavedromu za signale tokom prijema:
+### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
+### Prikaz koda u Wavedromu za signale tokom prijema:
 ---
+
+### Napomene:
+- **0x55**: Preambula - 7 okteta
+- **0xD5**: SFD (Start Frame Delimiter) - 1 oktet
+
+Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D83`:
+- **Destination MAC Address**: 6 okteta.
+- **Source MAC Address**: 6 okteta.
+- **EtherType/Length**: 2 okteta.
+- **Payload (Data)**: 66 okteta (proizvoljno odabrana veličina).
+- **FCS (Frame Check Sequence)**: 4 okteta.
+
 ```json
 { "signal": [
-  { "name": "gmii_rx_clk", "wave": "p..............." },
-  { "name": "gmii_rxreset_n", "wave": "01.............." },
-  { "name": "gmii_rxdv", "wave": "01..0..........." },
-  { "name": "gmii_rxer", "wave": "0....10........." },
-  { "name": "gmii_rxd", "wave": "x2222222222xxxxx", "data": ["8'h55", "8'hAB", "D1", "D2","D3", "D4", "D5", "D6", "D7", "D8", "x"] },
-  { "name": "rx_st_data", "wave": "xxxx22222222x...", "data": ["D1", "D2", "8’h0E", "D4", "D5", "D6", "D7", "D8", "x"] },
-  { "name": "rx_st_sop", "wave": "0...10.........." },
-  { "name": "rx_st_eop", "wave": "0..........10..." },
-  { "name": "rx_st_empty", "wave": "...22.......xx..", "data": ["0"] },
-  { "name": "rx_st_valid", "wave": "0...1.01.....0.." },
-  { "name": "rx_st_ready", "wave": "0...1.......0..." },
-  { "name": "rx_st_err", "wave": "0.....10........" }
-]}
+  { "name": "gmii_rx_clk", "wave": "p................." },
+  { "name": "gmii_rxreset_n", "wave": "1................." },
+  { "name": "gmii_rxdv", "wave": "01.............0.." },
+  { "name": "gmii_rxd [7:0]", "wave": "x222222222222|2xxx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", " ","D83"] },
+  { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxx222|22x", "data": ["D0-D7", "D8-D15 "," ", "D72-D79","D80-D87"] },
+  { "name": "rx_st_sop", "wave": "0..........10....." },
+  { "name": "rx_st_eop", "wave": "0...............10" },
+  { "name": "rx_st_empty", "wave": "..........22....2x", "data": ["0","4"] },
+  { "name": "rx_st_valid", "wave": "0..........1.....0" },
+  { "name": "rx_st_ready", "wave": "1................." }
+],
+ "config":{
+   "hscale": 2}
+}
 ```
 
 
