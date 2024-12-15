@@ -118,7 +118,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxx22.222..222x", "data": ["D0-D7", "D8-D15 ","D16-D23","D24-D31","D32-D39", "D40-D47","D48-D55", "D56-D63"] },
   { "name": "rx_st_sop", "wave": "0..........10.........." },
   { "name": "rx_st_eop", "wave": "0....................10" },
-  { "name": "rx_st_empty", "wave": "..........22..........xx", "data": ["0"] },
+  { "name": "rx_st_empty", "wave": "..........22..........x", "data": ["0"] },
   { "name": "rx_st_valid", "wave": "0..........1..........0" },
   { "name": "rx_st_ready", "wave": "1...........0.1.0..1..." }
 ],
