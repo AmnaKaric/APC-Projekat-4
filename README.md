@@ -13,6 +13,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   **11.12.2024.** MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U  
   **12.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES <br>
   **15.12.2024.** DRUGI DIO PROJEKTNOG ZADATKA - FSM DIJAGRAM
+  **16.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES <br>
 
 </details>
 
@@ -21,6 +22,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`gmii_rxreset_n`**: Reset signal koji inicijalizira prijemni dio GMII interfejsa.
 - **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
 - **`gmii_rxd[7:0]`**: 8-bitni ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
+- **`avalon_clk`**: Takt signal za sinhronizaciju prenosa podataka na Avalon-ST interfejsu (frekvencija osam puta manja od frekvencije ulaznog takta gmii_rx_clk).
 - **`rx_st_data[63:0]`**: 64-bitni izlazni signal koji prenosi podatke sa Avalon-ST interfejsa, uključujući cijeli Ethernet okvir, počevši od odredišne adrese pa do FCS polja.
 - **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_eop`**: Signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
@@ -47,22 +49,22 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 
 ```json
 { "signal": [
-  { "name": "gmii_rx_clk", "wave": "p................." },
-  { "name": "gmii_rxreset_n", "wave": "1................." },
-  { "name": "gmii_rxdv", "wave": "01.............0.." },
-  { "name": "gmii_rxd [7:0]", "wave": "x222222222222|2xxx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", " ","D63"] },
-  { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxx222|2xx", "data": ["D0-D7", "D8-D15 "," ", "D56-D63"] },
-  { "name": "rx_st_sop", "wave": "0..........10....." },
-  { "name": "rx_st_eop", "wave": "0..............10." },
-  { "name": "rx_st_empty", "wave": "..........22....xx", "data": ["0"] },
-  { "name": "rx_st_valid", "wave": "0..........1....0." },
-  { "name": "rx_st_ready", "wave": "1................." }
+  { "name": "gmii_rx_clk", "wave": "p..................|......" },
+  { "name": "gmii_rxreset_n", "wave": "1..................|......" },
+  { "name": "gmii_rxdv", "wave": "0...1..............|....0." },
+  { "name": "gmii_rxd [7:0]", "wave": "xxxxx.222222222222.|2222xx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", " ", "D60","D61","D62","D63"] },
+  { "name": "avalon_clk",  "wave": "h...l...h...l...h..|l...h."}, 
+  { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxxxxxxx22.|....2x", "data": ["D0-D7",  " ", "D56-D63"] },
+  { "name": "rx_st_sop", "wave": "0...............10.|......" },
+  { "name": "rx_st_eop", "wave": "0..................|....10" },
+  { "name": "rx_st_empty", "wave": "...............22..|.....x", "data": ["0"] },
+  { "name": "rx_st_valid", "wave": "0...............1..|.....0" },
+  { "name": "rx_st_ready", "wave": "1..................|......" }
 ],
  "config":{
    "hscale": 2}
 }
 ```
-
 
 ### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
 ### Prikaz koda u Wavedromu za signale tokom prijema:
