@@ -12,6 +12,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   **10.12.2024.** OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
   **11.12.2024.** MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U  
   **12.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES
+  **15.12.2024.** DRUGI DIO PROJEKTNOG ZADATKA -  DIJAGRAM STANJA
 
 </details>
 
@@ -126,3 +127,10 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
    "hscale": 2}
 }
 ```
+
+#### **Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
+Konačni automat se sastoji od 4 stanja: IDLE, RECEIVE, WAIT, SEND.
+**`IDLE`**: stanje kada se GMII interfejs nalazi u stanju mirovanja i čeka početak Ethernet okvira.
+**`RECIEVE`**: stanje u kom se vrši prijem Ethernet okvira.
+**`WAIT`**: stanje uvedeno zbog backpressure mehanizma, koje omogućava pauziranje prijenosa podataka prema Avalon-ST interfejsu.
+**`SEND`**: stanje u kome se vrši slanje Ethernet okvira na izlazni Avalon-ST interfejs.
