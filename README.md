@@ -16,7 +16,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 
 </details>
 
-#### **Popis potrebnih ulaznih i izlaznih signala:**
+#### **1. Popis potrebnih ulaznih i izlaznih signala:**
 - **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
 - **`gmii_rxreset_n`**: Reset signal koji inicijalizira prijemni dio GMII interfejsa.
 - **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
@@ -128,7 +128,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 }
 ```
 
-#### **Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
+#### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
 
 Konačni automat se sastoji od 4 stanja: IDLE, RECEIVE, WAIT, SEND.
 
