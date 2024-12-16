@@ -112,12 +112,16 @@ Konačni automat se sastoji od 4 stanja: IDLE, RECEIVE, WAIT, SEND.
 
 **`SEND`**: stanje u kome se vrši slanje Ethernet okvira na izlazni Avalon-ST interfejs.
 
-<div style="font-size: 10px;">
-  <b>LITERATURA</b><br>
-  [1] AMD, "GMII Reception", PG047 Gigabit Ethernet PCS/PMA <br>
-  [2] Intel, "Gigabit Media Independent Interface", Intel FPGA Documentation <br>
-  [3] Intel, "Avalon-ST Rx Interface", Intel FPGA Documentation <br>
-  [4] Kaljić, E. (2024.), "Arhitekture paketskih čvorišta - Predavanje 7".
-</div>
+## Literatura
+
+[1] AMD, *GMII Reception*, PG047 Gigabit Ethernet PCS/PMA.  
+
+[2] Intel, *Gigabit Media Independent Interface*, Intel FPGA Documentation.  
+
+[3] Intel, *Avalon-ST Rx Interface*, Intel FPGA Documentation.  
+
+[4] Kaljić E., (2024.), *Arhitekture paketskih čvorišta - Predavanje 7*.  
+
+[5] IEEE Std 802.3-2022, *IEEE Standard for Ethernet*.
 
 
