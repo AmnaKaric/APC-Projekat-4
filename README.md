@@ -51,7 +51,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 { "signal": [
   { "name": "gmii_rx_clk", "wave": "p..................|......" },
   { "name": "gmii_rxreset_n", "wave": "1..................|......" },
-  { "name": "gmii_rxdv", "wave": "0...1..............|....0." },
+  { "name": "gmii_rxdv", "wave": "0.....1............|....0." },
   { "name": "gmii_rxd [7:0]", "wave": "xxxxx.222222222222.|2222xx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", " ", "D60","D61","D62","D63"] },
   { "name": "avalon_clk",  "wave": "h...l...h...l...h..|l...h."}, 
   { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxxxxxxx22.|....2x", "data": ["D0-D7",  " ", "D56-D63"] },
