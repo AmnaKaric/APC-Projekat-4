@@ -112,11 +112,12 @@ Konačni automat se sastoji od 4 stanja: IDLE, RECEIVE, WAIT, SEND.
 
 **`SEND`**: stanje u kome se vrši slanje Ethernet okvira na izlazni Avalon-ST interfejs.
 
-### LITERATURA
-
-[1] AMD, "GMII Reception", *PG047 Gigabit Ethernet PCS/PMA*, dostupno na: [https://docs.amd.com/r/en-US/pg047-gig-eth-pcs-pma/GMII-Reception](https://docs.amd.com/r/en-US/pg047-gig-eth-pcs-pma/GMII-Reception).  
-[2] Intel, "Gigabit Media Independent Interface", *Intel FPGA Documentation*, dostupno na: [https://www.intel.com/content/www/us/en/docs/programmable/683595/21-2-19-4-0/gigabit-media-independent-interface.html?fbclid=IwY2xjawHCnCRleHRuA2FlbQIxMAABHTUg0a_ACKDYEK4l3lHk9fOyixVmntkp4wrJYc1VvoaDGCd3HI78ab9yMw_aem_pYdAYk17s75xWuAEoval7A](https://www.intel.com/content/www/us/en/docs/programmable/683595/21-2-19-4-0/gigabit-media-independent-interface.html?fbclid=IwY2xjawHCnCRleHRuA2FlbQIxMAABHTUg0a_ACKDYEK4l3lHk9fOyixVmntkp4wrJYc1VvoaDGCd3HI78ab9yMw_aem_pYdAYk17s75xWuAEoval7A).  
-[3] Intel, "Avalon-ST Rx Interface", *Intel FPGA Documentation*, dostupno na: [https://www.intel.com/content/www/us/en/docs/programmable/683733/18-0/avalon-st-rx-interface.html?fbclid=IwY2xjawHCnBpleHRuA2FlbQIxMAABHQL92FYZS5qqD0bah06eavjeye_E4X-WEhG3HFrhmhIU5-kizI6KwQyyWQ_aem_zUim3g8OSlCZaUWUajSf6w](https://www.intel.com/content/www/us/en/docs/programmable/683733/18-0/avalon-st-rx-interface.html?fbclid=IwY2xjawHCnBpleHRuA2FlbQIxMAABHQL92FYZS5qqD0bah06eavjeye_E4X-WEhG3HFrhmhIU5-kizI6KwQyyWQ_aem_zUim3g8OSlCZaUWUajSf6w).  
-[4] "Arhitekture paketskih čvorišta", *Predavanje 7*.
+<div style="font-size: 10px;">
+  <b>LITERATURA</b><br>
+  [1] AMD, "GMII Reception", PG047 Gigabit Ethernet PCS/PMA, dostupno na: https://docs.amd.com/r/en-US/pg047-gig-eth-pcs-pma/GMII-Reception.<br>
+  [2] Intel, "Gigabit Media Independent Interface", Intel FPGA Documentation, dostupno na: https://www.intel.com/content/www/us/en/docs/programmable/683595/21-2-19-4-0/gigabit-media-independent-interface.html?fbclid=IwY2xjawHCnCRleHRuA2FlbQIxMAABHTUg0a_ACKDYEK4l3lHk9fOyixVmntkp4wrJYc1VvoaDGCd3HI78ab9yMw_aem_pYdAYk17s75xWuAEoval7A.<br>
+  [3] Intel, "Avalon-ST Rx Interface", Intel FPGA Documentation, dostupno na: https://www.intel.com/content/www/us/en/docs/programmable/683733/18-0/avalon-st-rx-interface.html?fbclid=IwY2xjawHCnBpleHRuA2FlbQIxMAABHQL92FYZS5qqD0bah06eavjeye_E4X-WEhG3HFrhmhIU5-kizI6KwQyyWQ_aem_zUim3g8OSlCZaUWUajSf6w.<br>
+  [4] "Arhitekture paketskih čvorišta", Predavanje 7.
+</div>
 
 
