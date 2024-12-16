@@ -83,16 +83,17 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 
 ```json
 { "signal": [
-  { "name": "gmii_rx_clk", "wave": "p................." },
-  { "name": "gmii_rxreset_n", "wave": "1................." },
-  { "name": "gmii_rxdv", "wave": "01.............0.." },
-  { "name": "gmii_rxd [7:0]", "wave": "x222222222222|2xxx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", " ","D83"] },
-  { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxx222|22x", "data": ["D0-D7", "D8-D15 "," ", "D72-D79","D80-D87"] },
-  { "name": "rx_st_sop", "wave": "0..........10....." },
-  { "name": "rx_st_eop", "wave": "0...............10" },
-  { "name": "rx_st_empty", "wave": "..........22....2x", "data": ["0","4"] },
-  { "name": "rx_st_valid", "wave": "0..........1.....0" },
-  { "name": "rx_st_ready", "wave": "1................." }
+  { "name": "gmii_rx_clk", "wave": "p....................|..........." },
+  { "name": "gmii_rxreset_n", "wave": "1....................|..........." },
+  { "name": "gmii_rxdv", "wave": "0...1................|.....0....." },
+  { "name": "gmii_rxd [7:0]", "wave": "xxxxx.222222222222222|22222xxxxxx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8","D9", "D10", "D11", " ", "D79","D80","D81","D82","D83"] },
+  { "name": "avalon_clk",  "wave": "h...l...h...l...h...l|.h...l...h."}, 
+  { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxxxxxxx22...|.2xxxxxxx2x", "data": ["D0-D7",  " ", "D72-D79", "D80-D83"] },
+  { "name": "rx_st_sop", "wave": "0...............10...|..........." },
+  { "name": "rx_st_eop", "wave": "0....................|.........10" },
+  { "name": "rx_st_empty", "wave": "...............22....|.........2x", "data": ["0","4"] },
+  { "name": "rx_st_valid", "wave": "0...............1....|..........0" },
+  { "name": "rx_st_ready", "wave": "1....................|..........." }
 ],
  "config":{
    "hscale": 2}
