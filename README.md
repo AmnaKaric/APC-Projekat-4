@@ -101,7 +101,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   { "name": "int_registar2", "wave": "2............................2.......2|.........2.......x" ,"data": ["IDLE","SENDING DATA","SENDING DATA","SENDING DATA"]}
 ]}
 ```
-
+![Slucaj b](sl_b.png)
 
 #### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
 
