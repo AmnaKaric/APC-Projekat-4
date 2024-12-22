@@ -51,7 +51,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 { "signal": [
   { "name": "gmii_rx_clk", "wave": "p.............................|............." },
   { "name": "reset", "wave": "10............................|............." },
-  { "name": "gmii_rxdv", "wave": "0............1................|....0........" },
+  { "name": "gmii_rxdv", "wave": "0....1........................|....0........" },
   { "name": "gmii_rxd [7:0]", "wave": "xxxx.3......455555555666666662|7777xxxxxxxxx", "data": ["0x55", "0xD5", "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8","D9", "D10", "D11","D12","D13", "D14","D15"," ","D60","D61","D62","D63"] },
   { "name": "avalon_clk",  "wave": "l....h...l...h...l...h...l...h|l...h...l...h"},
   { "name": "rx_st_data [63:0]", "wave": "xxxxxxxxxxxxxxxxxxxxx5.......2|8...7.......x", "data": ["D0-D7", " ","D48-D55", "D56-D63"] },
@@ -60,9 +60,9 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   { "name": "rx_st_empty", "wave": "....................22........|............x", "data": ["0"] },
   { "name": "rx_st_valid", "wave": "0....................1........|............0" },
   { "name": "rx_st_ready", "wave": "1.............................|............." },
-  { "name": "int_registar1", "wave": "2............x2......x2.......|............2", "data": ["IDLE","RECEIVING PREAMBULA", "RECEIVING DATA", "IDLE"] },
-  { "name": "int_registar2", "wave": "1.............................|............." },
-  { "name": "counter", "wave": "1.............................|............." }
+  { "name": "int_registar1", "wave": "2....x2......2................|....2........", "data": ["IDLE","RECEIVING PREAMBULA", "RECEIVING DATA", "IDLE"] },
+  { "name": "counter", "wave": "2............22222222222222222|22222........" ,"data":["0","1","2","3","4","5","6","7","8","1","2","3","4","5","6","7","8","","5","6","7","8","0"]},
+  { "name": "int_registar2", "wave": "2....................2.......2|....2.......x" ,"data": ["IDLE","SENDING DATA","SENDING DATA","SENDING DATA"]}
 ]}
 ```
 
@@ -94,9 +94,10 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   { "name": "rx_st_empty", "wave": "............................22........|.........3.......x", "data": ["0","4"] },
   { "name": "rx_st_valid", "wave": "0............................1........|.................0" },
   { "name": "rx_st_ready", "wave": "1.....................................|.................." },
-  { "name": "int_registar1", "wave": "2............x2......x2...............|.................2", "data": ["IDLE","RECEIVING PREAMBULA", "RECEIVING DATA", "IDLE"] },
-  { "name": "int_registar2", "wave": "1.....................................|.................." },
-  { "name": "counter", "wave": "1.....................................|.................." }
+  { "name": "int_registar1", "wave": "2............x2........2..............|.....2............", "data": ["IDLE","RECEIVING PREAMBULA", "RECEIVING DATA", "IDLE"] },
+  { "name": "counter", "wave": "2....................22222222222222222|22222x............." ,"data":["0","1","2","3","4","5","6","7","8","1","2","3","4","5","6","7","8","","8","1","2","3","4"]},
+  { "name": "counter_empty", "wave": "2.....................................|.....22222........","data": ["0","1","2","3","4","0"]},
+  { "name": "int_registar2", "wave": "2............................2.......2|.........2.......x" ,"data": ["IDLE","SENDING DATA","SENDING DATA","SENDING DATA"]}
 ]}
 ```
 
