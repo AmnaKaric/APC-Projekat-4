@@ -66,7 +66,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   { "name": "int_registar2", "wave": "2....................2.......2|....2.......x" ,"data": ["IDLE","SENDING DATA","SENDING DATA","SENDING DATA"]}
 ]}
 ```
-
+![Slucaj 1](images/sl_a.png)
 ### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
 ### Prikaz koda u Wavedromu za signale tokom prijema:
 ---
