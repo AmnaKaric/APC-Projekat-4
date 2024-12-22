@@ -102,6 +102,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 ]}
 ```
 
+
 #### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
 
 Konačni automat se sastoji od 4 stanja: IDLE, RECEIVE, WAIT, SEND.
