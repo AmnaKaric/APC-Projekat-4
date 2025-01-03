@@ -15,6 +15,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   **15.12.2024.** DRUGI DIO PROJEKTNOG ZADATKA - FSM DIJAGRAM <br>
   **16.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES <br>
   **22.12.2024.** DODAVANJE INTERNIH SIGNALA
+  **03.01.2025** RAD NA WAVEDROM-U I FSM DIJAGRAMU
 
 </details>
 
@@ -24,12 +25,15 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
 - **`gmii_rxd[7:0]`**: 8-bitni ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
 - **`avalon_clk`**: Takt signal za sinhronizaciju prenosa podataka na Avalon-ST interfejsu (frekvencija osam puta manja od frekvencije ulaznog takta gmii_rx_clk).
+- **`clk_counter`**: Brojač koji broji takt signal `avalon_clk`.
 - **`rx_st_data[63:0]`**: 64-bitni izlazni signal koji prenosi podatke sa Avalon-ST interfejsa, uključujući cijeli Ethernet okvir, počevši od odredišne adrese pa do FCS polja.
 - **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_eop`**: Signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_empty`**: Signal koji pokazuje koliko bajtova u posljednjem 64-bitnom segmentu okvira je preostalo.
 - **`rx_st_valid`**: Signal koji označava da su podaci na `rx_st_data` trenutno validni i spremni za obradu.
 - **`rx_st_ready`**: Ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
+- **`state_registar`**: Interni signal, koji prati trenutno stanje ulaznih signala.
+- **`counter`**: 8-bitni brojač koji broji broj primljenih bita na ulazu.
   
 ### **a) Prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8**
 ### Prikaz koda u Wavedromu za signale tokom prijema:
@@ -110,15 +114,14 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 
 #### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
 
-Konačni automat se sastoji od 4 stanja: IDLE, RECEIVE, WAIT, SEND.
+Konačni automat se sastoji od 3 stanja: IDLE, RECEIVING_PREAMBLE, RECEIVING_DATA.
 
 **`IDLE`**: stanje kada se GMII interfejs nalazi u stanju mirovanja i čeka početak Ethernet okvira.
 
-**`RECIEVE`**: stanje u kom se vrši prijem Ethernet okvira.
+**`RECIEVING_PREAMBLE`**: stanje koje označava prijem preambule.
 
-**`WAIT`**: stanje uvedeno zbog backpressure mehanizma, koje omogućava pauziranje prijenosa podataka prema Avalon-ST interfejsu.
+**`RECIEVING_DATA`**: stanje u kom se vrši prijem Ethernet okvira.
 
-**`SEND`**: stanje u kome se vrši slanje Ethernet okvira na izlazni Avalon-ST interfejs.
 
 ## Literatura
 
