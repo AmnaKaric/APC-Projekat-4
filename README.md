@@ -15,7 +15,8 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   **15.12.2024.** DRUGI DIO PROJEKTNOG ZADATKA - FSM DIJAGRAM <br>
   **16.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES <br>
   **22.12.2024.** DODAVANJE INTERNIH SIGNALA <br>
-  **03.01.2025** RAD NA WAVEDROM-U I FSM DIJAGRAMU
+  **03.01.2025** RAD NA WAVEDROM-U I FSM DIJAGRAMU <br>
+  **08.01.2025** RAD NA WAVEDROM-U 
 
 </details>
 
