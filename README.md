@@ -131,7 +131,6 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 
 
 ```
-![slucajB](https://github.com/user-attachments/assets/113662b6-faf5-437f-9ba9-4a1b6043a1f0)
 
 
 #### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
