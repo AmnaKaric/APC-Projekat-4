@@ -83,6 +83,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 }
 ```
 
+
 ### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
 ### Prikaz koda u Wavedromu za signale tokom prijema:
 ---
