@@ -17,7 +17,8 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   **22.12.2024.** DODAVANJE INTERNIH SIGNALA <br>
   **03.01.2025** RAD NA WAVEDROM-U I FSM DIJAGRAMU <br>
   **08.01.2025** RAD NA WAVEDROM-U <br>
-  **10.01.2025** FINALNE KOREKCIJE WAVEDROM-A , FSM ZAVRŠEN
+  **10.01.2025** FINALNE KOREKCIJE WAVEDROM-A , FSM ZAVRŠEN <br>
+  **11.01.2025** POČETAK PISANJA VHDL KODA
 
 </details>
 
