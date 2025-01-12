@@ -85,6 +85,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   ]
 }
 ```
+![A (2)](https://github.com/user-attachments/assets/939b4d59-df55-49d4-9a05-dbe874f6ef89)
 
 
 ### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
@@ -134,6 +135,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   ]
 }
 ```
+![B (2)](https://github.com/user-attachments/assets/0ae259b2-5a5a-428d-9547-a9fc2ce41a8c)
 
 
 #### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
