@@ -18,7 +18,8 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
   **03.01.2025** RAD NA WAVEDROM-U I FSM DIJAGRAMU <br>
   **08.01.2025** RAD NA WAVEDROM-U <br>
   **10.01.2025** FINALNE KOREKCIJE WAVEDROM-A , FSM ZAVRŠEN <br>
-  **11.01.2025** POČETAK PISANJA VHDL KODA
+  **11.01.2025** POČETAK PISANJA VHDL KODA <br>
+  **20.01.2025** IZRADA VHDL KODA I KOREKCIJA WAVEDROM-A
 
 </details>
 
@@ -28,7 +29,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
 - **`gmii_rxd[7:0]`**: 8-bitni ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
 - **`avalon_clk`**: Takt signal za sinhronizaciju prenosa podataka na Avalon-ST interfejsu (frekvencija osam puta manja od frekvencije ulaznog takta gmii_rx_clk).
-- **`int_data`**: Interni signal, koji predstavlja 8-bitni vektor primljenih vrijednosti
+- **`int_data`**: Interni signal, koji predstavlja 64-bitni vektor primljenih vrijednosti
 - **`clk_counter`**: Brojač koji broji takt signal `avalon_clk`.
 - **`rx_st_data[63:0]`**: 64-bitni izlazni signal koji prenosi podatke sa Avalon-ST interfejsa, uključujući cijeli Ethernet okvir, počevši od odredišne adrese pa do FCS polja.
 - **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
