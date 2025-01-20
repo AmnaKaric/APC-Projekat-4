@@ -87,8 +87,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   ]
 }
 ```
-![A (2)](https://github.com/user-attachments/assets/939b4d59-df55-49d4-9a05-dbe874f6ef89)
-
+![slucaj_a](https://github.com/user-attachments/assets/5e04ef8e-596a-4560-833d-b6d1421e5904)
 
 ### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
 ### Prikaz koda u Wavedromu za signale tokom prijema:
@@ -135,8 +134,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
   ]
 }
 ```
-![B (2)](https://github.com/user-attachments/assets/0ae259b2-5a5a-428d-9547-a9fc2ce41a8c)
-
+![slucaj_b](https://github.com/user-attachments/assets/70b69d1c-1b77-4b60-8509-f021d2dc7e0e)
 
 #### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
 
