@@ -87,9 +87,12 @@ Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatk
 
 ### **a) Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8**
 
+![a_slucaj_modelsim](https://github.com/user-attachments/assets/de6d0b8e-d653-4d08-a48a-be2cc85c9d46)
+
 
 ### **b) Prikaz signala u ModelSim-u za prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
 
+![b_slucaj_modelsim](https://github.com/user-attachments/assets/93ac6e28-612b-4904-a6ca-9ef488931c03)
 
 
 ## Literatura
