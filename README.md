@@ -84,6 +84,9 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 
 ![FSM_dijagram](https://github.com/user-attachments/assets/592f90c4-b247-462c-9331-c46302f40522)
 
+![rtl_viewer](https://github.com/user-attachments/assets/84261ad4-7569-4cc2-9f48-65b37c89078a)
+
+
 ### **3. Vizuelna verifikacija stanja automata
 
 U Quartus-u je izvršena verifikacija predstavljenog FSM dijagrama stanja preko draw.io. 
