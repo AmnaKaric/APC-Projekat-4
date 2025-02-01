@@ -89,7 +89,7 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 
 Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatka sa 8, te za slučaj prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8. Pomoću ModelSim alata izvršena je verifikacija funkcionalnosti implementiranog GMII prijemnog interfejsa.
 
-### **a) Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8**
+### **a) Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8:**
 
 ![a_slucaj_modelsim](https://github.com/user-attachments/assets/de6d0b8e-d653-4d08-a48a-be2cc85c9d46)
 
