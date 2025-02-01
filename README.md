@@ -98,6 +98,11 @@ Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatk
 
 ![b_slucaj_modelsim](https://github.com/user-attachments/assets/93ac6e28-612b-4904-a6ca-9ef488931c03)
 
+### Vizuelna verifikacija stanja automata
+
+U Quartus-u je izvršena verifikacija predstavljenog FSM dijagrama stanja preko draw.io. 
+
+![fsm](https://github.com/user-attachments/assets/0a556b98-6af3-4d6e-a458-8cb753be3b5c)
 
 ## Literatura
 
