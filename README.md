@@ -83,7 +83,7 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 
 **`RECIEVING_PREAMBLE`**: predstavlja stanje u kojem se prima preambula Ethernet okvira. Kada GMII interfejs detektuje SFD (Start Frame Delimiter), odnosno bajt 0xD5, i signal `gmii_rxdv` ostane '1', prelazi se u stanje RECEIVING_DATA. 
 
-**`RECIEVING_DATA`**: predstavlja stanje u kojem se obrađuju svi podaci Ethernet okvira. Sistem ostaje u ovom stanju sve dok je signal `gmii_rxdv` jednak '1', što označava da okvir još uvijek traje. Tokom ovog stanja vrijednost brojača `counter` se smanjuje sa svakim primljenim paketom, te se pri vrijednosti "000" resetuje i ponovo počinje sa brojanjem paketa. Ova dva uslova označavaju to da je na prijem stiglo 8 bita koji se zajedno šalju na izlaz. Kada se prijem okvira završi, odnosno kada `gmii_rxdv` postane '0', sistem prelazi stanje u LAST_DATA.
+**`RECIEVING_DATA`**: predstavlja stanje u kojem se obrađuju svi podaci Ethernet okvira. Sistem ostaje u ovom stanju sve dok je signal `gmii_rxdv` jednak '1', što označava da okvir još uvijek traje. Tokom ovog stanja vrijednost brojača `counter` se smanjuje sa svakim primljenim paketom, te se pri vrijednosti "000" resetuje i ponovo počinje sa brojanjem paketa. Ova dva uslova označavaju to da je na prijem stiglo 8 bita koji se zajedno šalju na izlaz. Kada se prijem okvira završi, odnosno kada `gmii_rxdv` postane '0' i kada `counter` izbroji posljednih 8 paketa, sistem prelazi stanje u LAST_DATA.
 
 **`LAST_DATA`**: predstavlja stanje u kojem se obrađuje posljednih 8 bita primljenih podataka, te se nakon njihove obrade, sistem vraća u stanje IDLE.
 
@@ -100,5 +100,7 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 [4] Kaljić E., (2024.), *Arhitekture paketskih čvorišta - Predavanje 7*.  
 
 [5] IEEE Std 802.3-2022, *IEEE Standard for Ethernet*.
+
+[6] Pong P. Chu (2006) *RTL hardware design using VHDL*, John Wiley & sons, Inc., New Jersey, USA.
 
 
