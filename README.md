@@ -81,6 +81,17 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 ![FSM_dijagram](https://github.com/user-attachments/assets/592f90c4-b247-462c-9331-c46302f40522)
 
 
+#### **3. Valni oblici simuliranih signala u ModelSim-u  
+
+Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatka sa 8, te za slučaj prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8. Pomoću ModelSim alata izvršena je verifikacija funkcionalnosti implementiranog GMII prijemnog interfejsa.
+
+### **a) Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8**
+
+
+### **b) Prikaz signala u ModelSim-u za prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
+
+
+
 ## Literatura
 
 [1] AMD, *GMII Reception*, PG047 Gigabit Ethernet PCS/PMA.  
