@@ -5,7 +5,7 @@ Modelirati i implementirati GMII prijemni interfejs koji putem ulaznog GMII inte
 preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-ST interfejs
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
-###Uvod 
+### ***Uvod*** 
 *Gigabit Media Independent Interface (GMII)* je standardizovani interfejs koji omogućava komunikaciju između *Media Access Control (MAC)* sloja i *fizičkog (PHY)* sloja u Gigabit Ethernet mrežama. Ovaj interfejs omogućava prijenos podataka brzinom do 1 Gbps koristeći 8-bitni paralelni prijenos podataka sinhronizovan taktom od 125 MHz.
 
 #### **1. Popis potrebnih signala:**
