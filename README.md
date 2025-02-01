@@ -25,13 +25,13 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 
 #### **1. Popis potrebnih signala:**
 
-**ULAZNI:**
+**GMII Interface:**
 - **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
 - **`reset`**: Reset signal koji inicijalizira prijemni dio GMII interfejsa.
 - **`gmii_rxdv`**: Signal koji označava da su podaci u `gmii_rxd` validni i da pripadaju Ethernet okviru.
 - **`gmii_rxd[7:0]`**: 8-bitni ulazni signal koji prenosi oktete Ethernet okvira, sukcesivno, bajt po bajt.
 
-**INTERNI:**
+**Interni signali:**
 - **`avalon_clk`**: Takt signal za sinhronizaciju prenosa podataka na Avalon-ST interfejsu (frekvencija osam puta manja od frekvencije ulaznog takta gmii_rx_clk).
 - **`int_data`**: Interni signal koji predstavlja 64-bitni vektor primljenih vrijednosti.
 - **`int_empty`**: Broj bajtova u posljednjem segmentu koji će biti zamijenjeni nulama radi poravnanja, kako bi se omogućilo slanje na izlaz. 
@@ -39,7 +39,7 @@ generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS p
 - **`state_registar`**: Interni signal koji prati trenutno stanje ulaznih signala.
 - **`counter`**: 8-bitni brojač koji broji primljene bite na ulazu.
 
-**IZLAZNI:**
+**Avalon‑ST RX Interface:**
 - **`rx_st_data[63:0]`**: 64-bitni izlazni signal koji prenosi podatke sa Avalon-ST interfejsa, uključujući cijeli Ethernet okvir, počevši od odredišne adrese pa do FCS polja.
 - **`rx_st_sop`**: Signal koji označava početak Ethernet okvira na Avalon-ST interfejsu.
 - **`rx_st_eop`**: Signal koji označava kraj Ethernet okvira na Avalon-ST interfejsu.
