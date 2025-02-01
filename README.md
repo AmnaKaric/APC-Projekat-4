@@ -5,23 +5,8 @@ Modelirati i implementirati GMII prijemni interfejs koji putem ulaznog GMII inte
 preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-ST interfejs
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
-<details>
-  <summary>TIMELINE AKTIVNOSTI NA PROJEKTU</summary>
-
-  **08.12.2024.** OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
-  **10.12.2024.** OPIS SIGNALA I PRIKAZ SIGNALA U WAVEDROM-U  
-  **11.12.2024.** MODIFICARNI PRIKAZ SIGNALA U WAVEDROM-U  
-  **12.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES <br>
-  **15.12.2024.** DRUGI DIO PROJEKTNOG ZADATKA - FSM DIJAGRAM <br>
-  **16.12.2024.** PREPRAVKA WAVEDROM-A PO UPUTAMA IZ ISSUES <br>
-  **22.12.2024.** DODAVANJE INTERNIH SIGNALA <br>
-  **03.01.2025** RAD NA WAVEDROM-U I FSM DIJAGRAMU <br>
-  **08.01.2025** RAD NA WAVEDROM-U <br>
-  **10.01.2025** FINALNE KOREKCIJE WAVEDROM-A , FSM ZAVRŠEN <br>
-  **11.01.2025** POČETAK PISANJA VHDL KODA <br>
-  **20.01.2025** IZRADA VHDL KODA I KOREKCIJA WAVEDROM-A
-
-</details>
+###Uvod 
+*Gigabit Media Independent Interface (GMII)* je standardizovani interfejs koji omogućava komunikaciju između *Media Access Control (MAC)* sloja i *fizičkog (PHY)* sloja u Gigabit Ethernet mrežama. Ovaj interfejs omogućava prijenos podataka brzinom do 1 Gbps koristeći 8-bitni paralelni prijenos podataka sinhronizovan taktom od 125 MHz.
 
 #### **1. Popis potrebnih signala:**
 
