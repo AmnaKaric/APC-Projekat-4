@@ -95,4 +95,8 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 
 [6] Pong P. Chu (2006) *RTL hardware design using VHDL*, John Wiley & sons, Inc., New Jersey, USA.
 
+[7] Chris Metcalf and Jim Semple, *Ethernet: Principles, Protocols, and Applications*, Prentice Hall, 2005.
+
+
+
 
