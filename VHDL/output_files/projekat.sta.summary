@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'gmii_rx_clk'
+Slack : -3.176
+TNS   : -415.209
+
+Type  : Slow 1200mV 85C Model Setup 'gmii_rxdv'
+Slack : -2.045
+TNS   : -5.185
+
+Type  : Slow 1200mV 85C Model Hold 'gmii_rx_clk'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'gmii_rxdv'
+Slack : 0.682
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gmii_rx_clk'
+Slack : -3.000
+TNS   : -175.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gmii_rxdv'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'gmii_rx_clk'
+Slack : -2.724
+TNS   : -353.700
+
+Type  : Slow 1200mV 0C Model Setup 'gmii_rxdv'
+Slack : -1.848
+TNS   : -4.684
+
+Type  : Slow 1200mV 0C Model Hold 'gmii_rx_clk'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'gmii_rxdv'
+Slack : 0.633
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gmii_rx_clk'
+Slack : -3.000
+TNS   : -175.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gmii_rxdv'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'gmii_rx_clk'
+Slack : -1.443
+TNS   : -171.357
+
+Type  : Fast 1200mV 0C Model Setup 'gmii_rxdv'
+Slack : -1.293
+TNS   : -2.886
+
+Type  : Fast 1200mV 0C Model Hold 'gmii_rx_clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gmii_rxdv'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gmii_rx_clk'
+Slack : -3.000
+TNS   : -188.985
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gmii_rxdv'
+Slack : -3.000
+TNS   : -3.000
+
+------------------------------------------------------------
