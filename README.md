@@ -6,7 +6,9 @@ preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
 ### **Uvod** 
-*Gigabit Media Independent Interface (GMII)* predstavlja ključnu komponentu Ethernet arhitekture kao standardizovani interfejs koji omogućava komunikaciju između *Media Access Control (MAC)* sloja i *fizičkog (PHY)* sloja u Gigabit Ethernet mrežama, uz očuvanje integriteta okvira i sinhronizaciju. Ovaj interfejs omogućava prenos podataka brzinom do 1 Gbps koristeći 8-bitni paralelni prenos podataka sinhronizovan taktom od 125 MHz. Odgovoran je za preuzimanje dolaznih Ethernet okvira sa fizičkog sloja, dekodiranje preambule i *Start Frame Delimiter (SFD)*, te formiranje i prosljeđivanje validnih okvira na viši sloj putem *Avalon Streaming (Avalon-ST)* interfejsa.
+*Gigabit Media Independent Interface (GMII)* predstavlja ključnu komponentu Ethernet arhitekture kao standardizovani interfejs koji omogućava komunikaciju između *Media Access Control (MAC)* sloja i *fizičkog (PHY)* sloja u Gigabit Ethernet mrežama, uz očuvanje integriteta okvira i sinhronizaciju. Ovaj interfejs omogućava prenos podataka brzinom do 1 Gbps koristeći 8-bitni paralelni prenos podataka sinhronizovan taktom od 125 MHz. 
+
+Ethernet okvir se sastoji od ključnih elemenata uključujući *preambulu* (7B), *Start Frame Delimiter* (1B), *odredišnu* (6B) i *izvorišnu* (6B) adresu, polje *dužina okvira* ili *tip protokola* (2B), *Payload* odnosno korisničke podatke (46-1500 B)  i *Frame Check Sequence (4)*. GMII prijemni interfejs je odgovoran za preuzimanje dolaznih Ethernet okvira sa fizičkog sloja, dekodiranje preambule i *Start Frame Delimiter (SFD)*, te formiranje i prosljeđivanje validnih okvira na viši sloj putem *Avalon Streaming (Avalon-ST)* interfejsa.
 
 ![novi_okvir](https://github.com/user-attachments/assets/fcac6106-6a7f-465c-95bf-1e472c2562c7)
 
@@ -95,17 +97,13 @@ Korištenjem *State Machine Viewer-a* koji služi za vizualizaciju i analizu FSM
 
 Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatka sa 8, te za slučaj prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8. Pomoću ModelSim alata izvršena je verifikacija funkcionalnosti implementiranog GMII prijemnog interfejsa.
 
-### **a) Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8:**
 
 ![a_slucaj](https://github.com/user-attachments/assets/39e90027-9e81-48ab-871b-4671b42a2a9a)
-
-
-
-### **b) Prikaz signala u ModelSim-u za prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8
 
 
 ![b_slucaj](https://github.com/user-attachments/assets/1dfd9104-b123-449b-95b2-a9c03ff3fd66)
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prikaz signala u ModelSim-u za prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8
 
 
 ## Literatura
