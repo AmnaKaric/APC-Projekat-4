@@ -90,7 +90,7 @@ Konačni automat se sastoji od 4 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 
 ### **3. *Register Transfer Level (RTL)* reprezentacije dizajna i *State Machine Viewer (STM)* verifikacija stanja automata**
 
-FSM je konstruisan kroz tri odvojena procesa. Prvi proces je sekvencijalna logika, koja koristi clock signal za praćenje i promjenu stanja. Naredni proces predstavlja kombinatornu logiku, koja se koristi se za praćenje trenutnog stanja (IDLE, RECEIVING_PREAMBLE, RECEIVING_DATA, LAST_DATA), ali i za upravljanje promjenama između tih stanja na osnovu ulaznih signala i brojača. Treći proces sadrži logiku za izlaze, gdje se izlazni signali generišu na temelju trenutnog stanja FSM-a. 
+Kako bi se kreirao prethodno opisani sklop, korišten je VHDL jezik. FSM je konstruisan kroz tri odvojena procesa. Prvi proces je sekvencijalna logika, koja koristi clock signal za praćenje i promjenu stanja. Naredni proces predstavlja kombinatornu logiku, koja se koristi se za praćenje trenutnog stanja (IDLE, RECEIVING_PREAMBLE, RECEIVING_DATA, LAST_DATA), ali i za upravljanje promjenama između tih stanja na osnovu ulaznih signala i brojača. Treći proces sadrži logiku za izlaze, gdje se izlazni signali generišu na temelju trenutnog stanja FSM-a. 
 
 RTL Viewer u Quartus-u pruža pregled *Register Transfer Level (RTL)* reprezentacije dizajna nakon uspješnog kompajliranja. Generiše se strukturni prikaz dizajna, prikazujući kako su elementi međusobno povezani na osnovu VHDL koda.
 
