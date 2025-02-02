@@ -6,7 +6,7 @@ preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
 
 ### **Uvod** 
-*Gigabit Media Independent Interface (GMII)* predstavlja ključnu komponentu Ethernet arhitekture kao standardizovani interfejs koji omogućava komunikaciju između *Media Access Control (MAC)* sloja i *fizičkog (PHY)* sloja u Gigabit Ethernet mrežama, uz očuvanje integriteta okvira i sinhronizaciju. Ovaj interfejs omogućava prenos podataka brzinom do 1 Gbps koristeći 8-bitni paralelni prenos podataka sinhronizovan taktom od 125 MHz. 
+*Gigabit Media Independent Interface (GMII)* predstavlja ključnu komponentu Ethernet arhitekture kao standardizovani interfejs koji omogućava komunikaciju između *Media Access Control (MAC)* sloja i *fizičkog (PHY)* sloja u Gigabit Ethernet mrežama, uz očuvanje integriteta okvira i sinhronizaciju. Kao takav ima ključnu ulogu u očuvanju integriteta Ethernet okvira, osiguravajući da se podaci prenose bez grešaka i u skladu sa protokolima Ethernet arhitekture. Omogućava prenos podataka brzinom do 1 Gbps koristeći 8-bitni paralelni prenos podataka sinhronizovan taktom od 125 MHz.
 
 Struktura *Ethernet okvira* uključuje *preambulu* (7B), koja služi za sinhronizaciju prijemnika; *Start Frame Delimiter* (1B), koji označava kraj preambule i početak okvira; *odredišnu* (6B) i *izvorišnu* (6B) adresu, koje označavaju krajnje tačke komunikacije; polje *dužine okvira* ili *tipa protokola* (2B), koje definiše vrstu prenesenih podataka; *payload* ili korisničke podatke (46–1500 B) te *Frame Check Sequence* (4B) za detekciju grešaka u prenesenim podacima. 
 
