@@ -1,0 +1,160 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do projekat_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/Amna/Desktop/Projekat/projekat.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:55:47 on Feb 02,2025
+# vcom -reportprogress 300 -2008 -work work C:/Users/Amna/Desktop/Projekat/projekat.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity projekat
+# -- Compiling architecture rtl of projekat
+# End time: 19:55:48 on Feb 02,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/tb_projekat.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:05 on Feb 02,2025
+# vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/tb_projekat.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_projekat
+# -- Compiling architecture behavior of tb_projekat
+# End time: 20:01:05 on Feb 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/projekat.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:08 on Feb 02,2025
+# vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/projekat.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity projekat
+# -- Compiling architecture rtl of projekat
+# End time: 20:01:08 on Feb 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/tb_projekat.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:11 on Feb 02,2025
+# vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/tb_projekat.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_projekat
+# -- Compiling architecture behavior of tb_projekat
+# End time: 20:01:11 on Feb 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript rtl_work.tb_projekat
+# vsim -gui -l msim_transcript rtl_work.tb_projekat 
+# Start time: 20:01:21 on Feb 02,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.tb_projekat(behavior)
+# Loading rtl_work.projekat(rtl)
+add wave -position insertpoint  \
+sim:/tb_projekat/uut/sop_flag \
+sim:/tb_projekat/uut/saved_empty \
+sim:/tb_projekat/uut/rx_st_valid \
+sim:/tb_projekat/uut/rx_st_sop \
+sim:/tb_projekat/uut/rx_st_ready \
+sim:/tb_projekat/uut/rx_st_eop \
+sim:/tb_projekat/uut/rx_st_empty \
+sim:/tb_projekat/uut/rx_st_data \
+sim:/tb_projekat/uut/reset \
+sim:/tb_projekat/uut/packet_count \
+sim:/tb_projekat/uut/out_data \
+sim:/tb_projekat/uut/next_state \
+sim:/tb_projekat/uut/int_empty \
+sim:/tb_projekat/uut/int_data \
+sim:/tb_projekat/uut/gmii_rxdv \
+sim:/tb_projekat/uut/gmii_rxd \
+sim:/tb_projekat/uut/gmii_rx_clk \
+sim:/tb_projekat/uut/empty_locked \
+sim:/tb_projekat/uut/current_state \
+sim:/tb_projekat/uut/counter \
+sim:/tb_projekat/uut/clk_counter \
+sim:/tb_projekat/uut/avalon_clk
+run
+run
+run
+vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/projekat.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:14 on Feb 02,2025
+# vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/projekat.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity projekat
+# -- Compiling architecture rtl of projekat
+# End time: 20:07:14 on Feb 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/tb_projekat_2.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:16 on Feb 02,2025
+# vcom -reportprogress 300 -work work C:/Users/Amna/Desktop/Projekat/tb_projekat_2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_projekat_2
+# -- Compiling architecture behavior of tb_projekat_2
+# End time: 20:07:16 on Feb 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript rtl_work.tb_projekat_2
+# End time: 20:07:28 on Feb 02,2025, Elapsed time: 0:06:07
+# Errors: 0, Warnings: 0
+# vsim -gui -l msim_transcript rtl_work.tb_projekat_2 
+# Start time: 20:07:28 on Feb 02,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.tb_projekat_2(behavior)
+# Loading rtl_work.projekat(rtl)
+add wave -position insertpoint  \
+sim:/tb_projekat_2/uut/sop_flag \
+sim:/tb_projekat_2/uut/saved_empty \
+sim:/tb_projekat_2/uut/rx_st_valid \
+sim:/tb_projekat_2/uut/rx_st_sop \
+sim:/tb_projekat_2/uut/rx_st_ready \
+sim:/tb_projekat_2/uut/rx_st_eop \
+sim:/tb_projekat_2/uut/rx_st_empty \
+sim:/tb_projekat_2/uut/rx_st_data \
+sim:/tb_projekat_2/uut/reset \
+sim:/tb_projekat_2/uut/packet_count \
+sim:/tb_projekat_2/uut/out_data \
+sim:/tb_projekat_2/uut/next_state \
+sim:/tb_projekat_2/uut/int_empty \
+sim:/tb_projekat_2/uut/int_data \
+sim:/tb_projekat_2/uut/gmii_rxdv \
+sim:/tb_projekat_2/uut/gmii_rxd \
+sim:/tb_projekat_2/uut/gmii_rx_clk \
+sim:/tb_projekat_2/uut/empty_locked \
+sim:/tb_projekat_2/uut/current_state \
+sim:/tb_projekat_2/uut/counter \
+sim:/tb_projekat_2/uut/clk_counter \
+sim:/tb_projekat_2/uut/avalon_clk
+run
+run
+# End time: 20:10:25 on Feb 02,2025, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 0
