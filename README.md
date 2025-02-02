@@ -37,8 +37,6 @@ Cilj ovog projekta je modeliranje i implementacija GMII prijemnog interfejsa, ko
 - **`rx_st_ready`**: Ulazni signal kojim prijemnik označava da je spreman da prihvati nove podatke sa Avalon-ST interfejsa.
   
 ### **a) Prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8**
-### Prikaz koda u Wavedromu za signale tokom prijema:
----
 
 ### Napomene:
 - **0x55**: Preambula - 7 okteta
@@ -54,8 +52,6 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 ![slucaj_a)](https://github.com/user-attachments/assets/64a67d14-761a-4a7f-bfd0-a63d68707a1e)
 
 ### **b) Prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8:**
-### Prikaz koda u Wavedromu za signale tokom prijema:
----
 
 ### Napomene:
 - **0x55**: Preambula - 7 okteta
