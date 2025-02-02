@@ -94,7 +94,7 @@ FSM je konstruisan kroz tri odvojena procesa. Prvi proces je sekvencijalna logik
 
 RTL Viewer u Quartus-u pruža pregled *Register Transfer Level (RTL)* reprezentacije dizajna nakon uspješnog kompajliranja. Generiše se strukturni prikaz dizajna, prikazujući kako su elementi međusobno povezani na osnovu VHDL koda.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![RTL_prikaz](https://github.com/user-attachments/assets/17f3cb9c-ab7c-4ed8-8f7b-6e05076a7551)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![rtl_novi](https://github.com/user-attachments/assets/b8beacbb-9744-476a-ae67-bdfc082cc921)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Slika 5**: RTL prikaz dizajna
 
 
