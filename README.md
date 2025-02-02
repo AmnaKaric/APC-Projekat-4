@@ -1,6 +1,6 @@
 # APC-Projekat-4
 
-## Projekat 4: GMII prijemni interfejs
+### Projekat 4: GMII prijemni interfejs
 Modelirati i implementirati GMII prijemni interfejs koji putem ulaznog GMII interfejsa prima
 preambulu, SFD i oktete dolaznog Ethernet okvira, te na izlazni 64-bitni Avalon-ST interfejs
 generiše dolazni Ethernet okvir (počinje odredišnom adresom a završava FCS poljem).
@@ -16,7 +16,7 @@ Struktura *Ethernet okvira* uključuje *preambulu* (7B), koja služi za sinhroni
 
 GMII prijemni interfejs je odgovoran za preuzimanje dolaznih Ethernet okvira sa fizičkog sloja, dekodiranje preambule i *Start Frame Delimiter (SFD)*, te formiranje i prosljeđivanje validnih okvira na viši sloj putem *Avalon Streaming (Avalon-ST)* interfejsa. Ovaj proces uključuje konverziju podataka iz GMII formata, u format prilagođen Avalon-ST interfejsu, koji očekuje 64-bitni tok podataka uz sinhronizaciju putem odgovarajućih kontrolnih signala (valid, ready, end-of-packet). U pogledu dizajna, razvoj GMII prijemnog interfejsa zahtjeva optimizovanu arhitekturu koja može efikasno obraditi visokofrekventni tok podataka bez gubitaka ili kašnjenja. Implementacija se može bazirati na *FPGA (Field-Programmable Gate Array)* ili *ASIC (Application-Specific Integrated Circuit)* tehnologijama. Uspješno modeliran i implementiran GMII prijemni interfejs doprinosi stabilnosti mrežnih sistema, a njegova efikasnost direktno utiče na performanse krajnjih aplikacija koje se oslanjaju na brz i pouzdan prenos podataka. Izradom ovog projektom pružen je uvid u rad GMII prijemnog interfejsa, te otvorene mogućnosti njegove dalje primjene.
 
-#### **1. Popis potrebnih signala:**
+### **1. Popis potrebnih signala:**
 
 **GMII Interface:**
 - **`gmii_rx_clk`**: Takt signal za sinhronizaciju prijema podataka na GMII interfejsu.
@@ -72,7 +72,7 @@ Nakon polja SFD pristižu okteti Ethernet okvira, koji su označeni sa `D0,...,D
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![slucaj_b)](https://github.com/user-attachments/assets/f6960f52-6dcd-4796-8eeb-b21d559ec0cc)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Slika 3**: Wavedrom prikaz prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8
 
-#### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
+### **2. Dizajnirati konačni automat koji upravlja tokom podataka kroz dati sklop**
 
 Konačni automat se sastoji od 4 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **RECEIVING_DATA** i **LAST_DATA**.
 
@@ -123,7 +123,7 @@ Implementirano je testno okruženje koje omogućava provjeru rada sklopa kroz si
 
 Verifikacija dizajna izvršena je putem State Machine Viewer-a u Quartus-u, čime je potvrđena ispravnost FSM modela. Simulacije su dodatno validirale funkcionalnost interfejsa za prijem okvira različitih dužina, potvrđujući tačnost kreiranih Wavedrom prikaza. Dobijeni rezultati pokazuju stabilan i pouzdan rad interfejsa, čime su zadovoljeni svi predviđeni funkcionalni zahtjevi projekta.
 
-## Literatura
+### Literatura
 
 [1] AMD, *GMII Reception*, PG047 Gigabit Ethernet PCS/PMA.  
 
