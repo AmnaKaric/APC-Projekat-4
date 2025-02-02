@@ -108,11 +108,13 @@ Korištenjem *State Machine Viewer-a* koji služi za vizualizaciju i analizu FSM
 Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatka sa 8, te za slučaj prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8. Pomoću ModelSim alata izvršena je verifikacija funkcionalnosti implementiranog GMII prijemnog interfejsa.
 
 
-![a_slucaj](https://github.com/user-attachments/assets/39e90027-9e81-48ab-871b-4671b42a2a9a)
+![slucaj_a)](https://github.com/user-attachments/assets/336c0a1b-c057-49fe-8be5-aa5ad8161015)
+![slucaj_a)_uvecani_prikaz](https://github.com/user-attachments/assets/302526eb-2eee-4516-884f-7ddf441ccce7)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Slika 7**: Prikaz signala u ModelSim-u za prijem okvira čija je dužina (u bajtima) djeljiva bez ostatka sa 8
 
 
-![b_slucaj](https://github.com/user-attachments/assets/1dfd9104-b123-449b-95b2-a9c03ff3fd66)
+![slucaj_b)](https://github.com/user-attachments/assets/a4431937-aae1-4010-bc87-a4fb2f72fdfa)
+![slucaj_b)_uvecani_prikaz](https://github.com/user-attachments/assets/d825927c-08d9-4cc2-927f-cd4fa8984264)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Slika 8**: Prikaz signala u ModelSim-u za prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8
 
 
