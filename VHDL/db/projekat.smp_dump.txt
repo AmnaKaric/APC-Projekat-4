@@ -1,7 +1,0 @@
-
-State Machine - |projekat|current_state
-Name current_state.LAST_DATA current_state.RECEIVING_DATA current_state.RECEIVING_PREAMBLE current_state.IDLE 
-current_state.IDLE 0 0 0 0 
-current_state.RECEIVING_PREAMBLE 0 0 1 1 
-current_state.RECEIVING_DATA 0 1 0 1 
-current_state.LAST_DATA 1 0 0 1 
