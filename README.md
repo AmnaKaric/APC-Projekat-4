@@ -105,8 +105,7 @@ Korištenjem *State Machine Viewer-a* koji služi za vizualizaciju i analizu FSM
 
 ### **4. Valni oblici simuliranih signala u ModelSim-u**  
 
-Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatka sa 8, te za slučaj prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8. Pomoću ModelSim alata izvršena je verifikacija funkcionalnosti implementiranog GMII prijemnog interfejsa.
-
+Kako bi se potvrdila tačnost kreiranih Wavedrom prikaza za dva razmatrana scenarija - prijem okvira čija je dužina (u bajtima) djeljiva sa 8 i prijem okvira čija dužina nije djeljiva sa 8, kreirana su dva testbench fajla. Na slikama 7 i 8 prikazani su odgovarajući signali iz simulacijskog okruženja ModelSim. Budući da simulacija traje preko 900 ns, rezultati su predstavljeni kroz dva prikaza: jedan koji obuhvata cjelokupan prijenos i drugi koji prikazuje uvećani segment posljednjih paketa. Ovaj uvećani prikaz omogućava detaljniju analizu i lakšu identifikaciju rada svih signala.
 
 ![slucaj_a)](https://github.com/user-attachments/assets/336c0a1b-c057-49fe-8be5-aa5ad8161015)
 ![slucaj_a)_uvecani_prikaz](https://github.com/user-attachments/assets/302526eb-2eee-4516-884f-7ddf441ccce7)
