@@ -116,6 +116,12 @@ Kako bi se potvrdila tačnost kreiranih Wavedrom prikaza za dva razmatrana scena
 ![slucaj_b)_uvecani_prikaz](https://github.com/user-attachments/assets/d825927c-08d9-4cc2-927f-cd4fa8984264)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Slika 8**: Prikaz signala u ModelSim-u za prijem okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8
 
+### Zaključak
+U okviru ovog projekta uspješno je modeliran i implementiran GMII prijemni interfejs koji omogućava pouzdan prijem Ethernet okvira putem GMII ulaza, te njihovu konverziju u 64-bitni Avalon-ST format. Korištenjem konačnog automata (FSM) sa četiri stanja osigurana je ispravna obrada podataka, uključujući sinhronizaciju prijema i prosljeđivanje paketa.
+
+Implementirano je testno okruženje koje omogućava provjeru rada sklopa kroz simulacije u ModelSim-u, pri čemu su testirani različiti scenariji prijema paketa. Analiza valnih oblika signala poslužila je kao dodatna potvrda ispravnosti interfejsa, omogućavajući detaljno ispitivanje ponašanja svih relevantnih signala.
+
+Verifikacija dizajna izvršena je putem State Machine Viewer-a u Quartus-u, čime je potvrđena ispravnost FSM modela. Simulacije su dodatno validirale funkcionalnost interfejsa za prijem okvira različitih dužina, potvrđujući tačnost kreiranih Wavedrom prikaza. Dobijeni rezultati pokazuju stabilan i pouzdan rad interfejsa, čime su zadovoljeni svi predviđeni funkcionalni zahtjevi projekta.
 
 ## Literatura
 
