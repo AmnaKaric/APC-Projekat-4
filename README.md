@@ -92,8 +92,7 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 
 RTL Viewer u Quartus-u pruža pregled *Register Transfer Level (RTL)* reprezentacije dizajna nakon uspješnog kompajliranja. Generiše se strukturni prikaz dizajna, prikazujući kako su elementi međusobno povezani na osnovu VHDL koda.
 
-![RTL_prikaz](https://github.com/user-attachments/assets/17f3cb9c-ab7c-4ed8-8f7b-6e05076a7551)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![FSM_quartus](https://github.com/user-attachments/assets/85d76dd6-ef94-4ce1-8ea5-66492a721d54)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![RTL_prikaz](https://github.com/user-attachments/assets/17f3cb9c-ab7c-4ed8-8f7b-6e05076a7551)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Slika 5**: RTL prikaz dizajna
 
 
