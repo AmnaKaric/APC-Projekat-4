@@ -83,13 +83,13 @@ Konačni automat se sastoji od 3 stanja: **IDLE**, **RECEIVING_PREAMBLE**, **REC
 ![rtl_viewer](https://github.com/user-attachments/assets/84261ad4-7569-4cc2-9f48-65b37c89078a)
 
 
-### **3. Vizuelna verifikacija stanja automata
+### **3. Vizuelna verifikacija stanja automata**
 
 U Quartus-u je izvršena verifikacija predstavljenog FSM dijagrama stanja preko draw.io. 
 ![fsm_dijagram](https://github.com/user-attachments/assets/116027b2-53cc-460b-bb3c-79f4f905a6a6)
 
 
-#### **4. Valni oblici simuliranih signala u ModelSim-u  
+#### **4. Valni oblici simuliranih signala u ModelSim-u**  
 
 Kreiran je testbench za slučaj čija je dužina (u bajtima) djeljiva bez ostatka sa 8, te za slučaj prijema okvira čija dužina (u bajtima) nije djeljiva bez ostatka sa 8. Pomoću ModelSim alata izvršena je verifikacija funkcionalnosti implementiranog GMII prijemnog interfejsa.
 
